@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BMIBFIForm.Designer.vb">
+      <DependentUpon>BMIBFIForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BMIBFIForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaloriesCalculatorForm.Designer.vb">
+      <DependentUpon>CaloriesCalculatorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CaloriesCalculatorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserInputForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -94,8 +106,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="WeightTrackerForm.Designer.vb">
+      <DependentUpon>WeightTrackerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WeightTrackerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BMIBFIForm.resx">
+      <DependentUpon>BMIBFIForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaloriesCalculatorForm.resx">
+      <DependentUpon>CaloriesCalculatorForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserInputForm.resx">
       <DependentUpon>UserInputForm.vb</DependentUpon>
     </EmbeddedResource>
