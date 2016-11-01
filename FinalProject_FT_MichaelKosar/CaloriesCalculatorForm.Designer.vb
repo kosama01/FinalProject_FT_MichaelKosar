@@ -22,33 +22,35 @@ Partial Class CaloriesCalculatorForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.libFood = New System.Windows.Forms.ListBox()
+        Me.libExcercises = New System.Windows.Forms.ListBox()
         Me.lblName = New System.Windows.Forms.Label()
         Me.lblCalories = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.txtCalories = New System.Windows.Forms.TextBox()
         Me.btnFood = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnExcercise = New System.Windows.Forms.Button()
+        Me.btnCalCalories = New System.Windows.Forms.Button()
+        Me.lblRemainingCalories = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'ListBox1
+        'libFood
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(351, 37)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(186, 116)
-        Me.ListBox1.TabIndex = 3
+        Me.libFood.FormattingEnabled = True
+        Me.libFood.ItemHeight = 16
+        Me.libFood.Location = New System.Drawing.Point(351, 37)
+        Me.libFood.Name = "libFood"
+        Me.libFood.Size = New System.Drawing.Size(186, 116)
+        Me.libFood.TabIndex = 3
         '
-        'ListBox2
+        'libExcercises
         '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 16
-        Me.ListBox2.Location = New System.Drawing.Point(350, 195)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(187, 132)
-        Me.ListBox2.TabIndex = 4
+        Me.libExcercises.FormattingEnabled = True
+        Me.libExcercises.ItemHeight = 16
+        Me.libExcercises.Location = New System.Drawing.Point(350, 195)
+        Me.libExcercises.Name = "libExcercises"
+        Me.libExcercises.Size = New System.Drawing.Size(187, 132)
+        Me.libExcercises.TabIndex = 4
         '
         'lblName
         '
@@ -91,28 +93,47 @@ Partial Class CaloriesCalculatorForm
         Me.btnFood.Text = "Add Food"
         Me.btnFood.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnExcercise
         '
-        Me.Button2.Location = New System.Drawing.Point(141, 142)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(110, 23)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Add Excercise"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnExcercise.Location = New System.Drawing.Point(141, 142)
+        Me.btnExcercise.Name = "btnExcercise"
+        Me.btnExcercise.Size = New System.Drawing.Size(110, 23)
+        Me.btnExcercise.TabIndex = 10
+        Me.btnExcercise.Text = "Add Excercise"
+        Me.btnExcercise.UseVisualStyleBackColor = True
+        '
+        'btnCalCalories
+        '
+        Me.btnCalCalories.Location = New System.Drawing.Point(34, 253)
+        Me.btnCalCalories.Name = "btnCalCalories"
+        Me.btnCalCalories.Size = New System.Drawing.Size(217, 38)
+        Me.btnCalCalories.TabIndex = 11
+        Me.btnCalCalories.Text = "Calculate Remaining Calories"
+        Me.btnCalCalories.UseVisualStyleBackColor = True
+        '
+        'lblRemainingCalories
+        '
+        Me.lblRemainingCalories.AutoSize = True
+        Me.lblRemainingCalories.Location = New System.Drawing.Point(87, 303)
+        Me.lblRemainingCalories.Name = "lblRemainingCalories"
+        Me.lblRemainingCalories.Size = New System.Drawing.Size(0, 17)
+        Me.lblRemainingCalories.TabIndex = 12
         '
         'CaloriesCalculatorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(591, 404)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.lblRemainingCalories)
+        Me.Controls.Add(Me.btnCalCalories)
+        Me.Controls.Add(Me.btnExcercise)
         Me.Controls.Add(Me.btnFood)
         Me.Controls.Add(Me.txtCalories)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.lblCalories)
         Me.Controls.Add(Me.lblName)
-        Me.Controls.Add(Me.ListBox2)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.libExcercises)
+        Me.Controls.Add(Me.libFood)
         Me.Name = "CaloriesCalculatorForm"
         Me.Text = "CaloriesCalculatorForm"
         Me.ResumeLayout(False)
@@ -120,12 +141,14 @@ Partial Class CaloriesCalculatorForm
 
     End Sub
 
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents libFood As ListBox
+    Friend WithEvents libExcercises As ListBox
     Friend WithEvents lblName As Label
     Friend WithEvents lblCalories As Label
     Friend WithEvents txtName As TextBox
     Friend WithEvents txtCalories As TextBox
     Friend WithEvents btnFood As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnExcercise As Button
+    Friend WithEvents btnCalCalories As Button
+    Friend WithEvents lblRemainingCalories As Label
 End Class

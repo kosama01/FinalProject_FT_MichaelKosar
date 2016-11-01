@@ -106,6 +106,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="WeeklyPlanForm.Designer.vb">
+      <DependentUpon>WeeklyPlanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklyPlanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WeightTrackerForm.Designer.vb">
       <DependentUpon>WeightTrackerForm.vb</DependentUpon>
     </Compile>
@@ -128,6 +134,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeeklyPlanForm.resx">
+      <DependentUpon>WeeklyPlanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightTrackerForm.resx">
+      <DependentUpon>WeightTrackerForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

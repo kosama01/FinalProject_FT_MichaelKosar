@@ -33,6 +33,9 @@ Partial Class BMIBFIForm
         Me.cboIdeal = New System.Windows.Forms.CheckBox()
         Me.lblCurrent = New System.Windows.Forms.Label()
         Me.lblIdeal = New System.Windows.Forms.Label()
+        Me.lblIdealWeight = New System.Windows.Forms.Label()
+        Me.lblCurrentWeight = New System.Windows.Forms.Label()
+        Me.lblWeight = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'radMale
@@ -60,7 +63,7 @@ Partial Class BMIBFIForm
         'lblBMI
         '
         Me.lblBMI.AutoSize = True
-        Me.lblBMI.Location = New System.Drawing.Point(30, 173)
+        Me.lblBMI.Location = New System.Drawing.Point(33, 208)
         Me.lblBMI.Name = "lblBMI"
         Me.lblBMI.Size = New System.Drawing.Size(31, 17)
         Me.lblBMI.TabIndex = 2
@@ -69,7 +72,7 @@ Partial Class BMIBFIForm
         'lblBFP
         '
         Me.lblBFP.AutoSize = True
-        Me.lblBFP.Location = New System.Drawing.Point(30, 222)
+        Me.lblBFP.Location = New System.Drawing.Point(33, 241)
         Me.lblBFP.Name = "lblBFP"
         Me.lblBFP.Size = New System.Drawing.Size(34, 17)
         Me.lblBFP.TabIndex = 3
@@ -78,7 +81,7 @@ Partial Class BMIBFIForm
         'lblCurrBMI
         '
         Me.lblCurrBMI.AutoSize = True
-        Me.lblCurrBMI.Location = New System.Drawing.Point(113, 173)
+        Me.lblCurrBMI.Location = New System.Drawing.Point(116, 208)
         Me.lblCurrBMI.Name = "lblCurrBMI"
         Me.lblCurrBMI.Size = New System.Drawing.Size(0, 17)
         Me.lblCurrBMI.TabIndex = 4
@@ -86,7 +89,7 @@ Partial Class BMIBFIForm
         'lblIdealBMI
         '
         Me.lblIdealBMI.AutoSize = True
-        Me.lblIdealBMI.Location = New System.Drawing.Point(221, 173)
+        Me.lblIdealBMI.Location = New System.Drawing.Point(224, 208)
         Me.lblIdealBMI.Name = "lblIdealBMI"
         Me.lblIdealBMI.Size = New System.Drawing.Size(0, 17)
         Me.lblIdealBMI.TabIndex = 5
@@ -94,7 +97,7 @@ Partial Class BMIBFIForm
         'lblCurrBFP
         '
         Me.lblCurrBFP.AutoSize = True
-        Me.lblCurrBFP.Location = New System.Drawing.Point(113, 219)
+        Me.lblCurrBFP.Location = New System.Drawing.Point(116, 238)
         Me.lblCurrBFP.Name = "lblCurrBFP"
         Me.lblCurrBFP.Size = New System.Drawing.Size(0, 17)
         Me.lblCurrBFP.TabIndex = 6
@@ -102,7 +105,7 @@ Partial Class BMIBFIForm
         'lblIdealBFP
         '
         Me.lblIdealBFP.AutoSize = True
-        Me.lblIdealBFP.Location = New System.Drawing.Point(221, 219)
+        Me.lblIdealBFP.Location = New System.Drawing.Point(224, 238)
         Me.lblIdealBFP.Name = "lblIdealBFP"
         Me.lblIdealBFP.Size = New System.Drawing.Size(0, 17)
         Me.lblIdealBFP.TabIndex = 7
@@ -120,7 +123,7 @@ Partial Class BMIBFIForm
         'lblCurrent
         '
         Me.lblCurrent.AutoSize = True
-        Me.lblCurrent.Location = New System.Drawing.Point(113, 127)
+        Me.lblCurrent.Location = New System.Drawing.Point(104, 127)
         Me.lblCurrent.Name = "lblCurrent"
         Me.lblCurrent.Size = New System.Drawing.Size(55, 17)
         Me.lblCurrent.TabIndex = 10
@@ -135,11 +138,39 @@ Partial Class BMIBFIForm
         Me.lblIdeal.TabIndex = 11
         Me.lblIdeal.Text = "Ideal"
         '
+        'lblIdealWeight
+        '
+        Me.lblIdealWeight.AutoSize = True
+        Me.lblIdealWeight.Location = New System.Drawing.Point(224, 170)
+        Me.lblIdealWeight.Name = "lblIdealWeight"
+        Me.lblIdealWeight.Size = New System.Drawing.Size(0, 17)
+        Me.lblIdealWeight.TabIndex = 14
+        '
+        'lblCurrentWeight
+        '
+        Me.lblCurrentWeight.AutoSize = True
+        Me.lblCurrentWeight.Location = New System.Drawing.Point(116, 170)
+        Me.lblCurrentWeight.Name = "lblCurrentWeight"
+        Me.lblCurrentWeight.Size = New System.Drawing.Size(0, 17)
+        Me.lblCurrentWeight.TabIndex = 13
+        '
+        'lblWeight
+        '
+        Me.lblWeight.AutoSize = True
+        Me.lblWeight.Location = New System.Drawing.Point(33, 170)
+        Me.lblWeight.Name = "lblWeight"
+        Me.lblWeight.Size = New System.Drawing.Size(52, 17)
+        Me.lblWeight.TabIndex = 12
+        Me.lblWeight.Text = "Weight"
+        '
         'BMIBFIForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(328, 294)
+        Me.Controls.Add(Me.lblIdealWeight)
+        Me.Controls.Add(Me.lblCurrentWeight)
+        Me.Controls.Add(Me.lblWeight)
         Me.Controls.Add(Me.lblIdeal)
         Me.Controls.Add(Me.lblCurrent)
         Me.Controls.Add(Me.cboIdeal)
@@ -169,4 +200,7 @@ Partial Class BMIBFIForm
     Friend WithEvents cboIdeal As CheckBox
     Friend WithEvents lblCurrent As Label
     Friend WithEvents lblIdeal As Label
+    Friend WithEvents lblIdealWeight As Label
+    Friend WithEvents lblCurrentWeight As Label
+    Friend WithEvents lblWeight As Label
 End Class
