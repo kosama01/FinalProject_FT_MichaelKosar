@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class WeightTrackerForm
+Partial Class UserInputForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,62 +22,87 @@ Partial Class WeightTrackerForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgvWeightTracker = New System.Windows.Forms.DataGridView()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.lblDate = New System.Windows.Forms.Label()
+        Me.lblHeight = New System.Windows.Forms.Label()
         Me.lblWeight = New System.Windows.Forms.Label()
+        Me.btnBMIBFP = New System.Windows.Forms.Button()
+        Me.btnCalories = New System.Windows.Forms.Button()
+        Me.txtHeight = New System.Windows.Forms.TextBox()
         Me.txtWeight = New System.Windows.Forms.TextBox()
+        Me.btnWeightTracker = New System.Windows.Forms.Button()
+        Me.btnWeekPlan = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        CType(Me.dgvWeightTracker, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'dgvWeightTracker
+        'lblHeight
         '
-        Me.dgvWeightTracker.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvWeightTracker.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvWeightTracker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvWeightTracker.Location = New System.Drawing.Point(25, 168)
-        Me.dgvWeightTracker.Name = "dgvWeightTracker"
-        Me.dgvWeightTracker.RowTemplate.Height = 24
-        Me.dgvWeightTracker.Size = New System.Drawing.Size(450, 200)
-        Me.dgvWeightTracker.TabIndex = 0
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(179, 120)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(122, 22)
-        Me.DateTimePicker1.TabIndex = 1
-        '
-        'lblDate
-        '
-        Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(59, 120)
-        Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(38, 17)
-        Me.lblDate.TabIndex = 2
-        Me.lblDate.Text = "Date"
+        Me.lblHeight.AutoSize = True
+        Me.lblHeight.Location = New System.Drawing.Point(31, 36)
+        Me.lblHeight.Name = "lblHeight"
+        Me.lblHeight.Size = New System.Drawing.Size(49, 17)
+        Me.lblHeight.TabIndex = 0
+        Me.lblHeight.Text = "Height"
         '
         'lblWeight
         '
         Me.lblWeight.AutoSize = True
-        Me.lblWeight.Location = New System.Drawing.Point(59, 81)
+        Me.lblWeight.Location = New System.Drawing.Point(31, 79)
         Me.lblWeight.Name = "lblWeight"
         Me.lblWeight.Size = New System.Drawing.Size(52, 17)
-        Me.lblWeight.TabIndex = 3
+        Me.lblWeight.TabIndex = 1
         Me.lblWeight.Text = "Weight"
+        '
+        'btnBMIBFP
+        '
+        Me.btnBMIBFP.Location = New System.Drawing.Point(19, 134)
+        Me.btnBMIBFP.Name = "btnBMIBFP"
+        Me.btnBMIBFP.Size = New System.Drawing.Size(75, 44)
+        Me.btnBMIBFP.TabIndex = 4
+        Me.btnBMIBFP.Text = "Calculate BMI/BFP"
+        Me.btnBMIBFP.UseVisualStyleBackColor = True
+        '
+        'btnCalories
+        '
+        Me.btnCalories.Location = New System.Drawing.Point(110, 134)
+        Me.btnCalories.Name = "btnCalories"
+        Me.btnCalories.Size = New System.Drawing.Size(75, 44)
+        Me.btnCalories.TabIndex = 5
+        Me.btnCalories.Text = "Calculate Calories"
+        Me.btnCalories.UseVisualStyleBackColor = True
+        '
+        'txtHeight
+        '
+        Me.txtHeight.Location = New System.Drawing.Point(134, 36)
+        Me.txtHeight.Name = "txtHeight"
+        Me.txtHeight.Size = New System.Drawing.Size(100, 22)
+        Me.txtHeight.TabIndex = 6
         '
         'txtWeight
         '
-        Me.txtWeight.Location = New System.Drawing.Point(179, 81)
+        Me.txtWeight.Location = New System.Drawing.Point(134, 79)
         Me.txtWeight.Name = "txtWeight"
         Me.txtWeight.Size = New System.Drawing.Size(100, 22)
-        Me.txtWeight.TabIndex = 4
+        Me.txtWeight.TabIndex = 7
+        '
+        'btnWeightTracker
+        '
+        Me.btnWeightTracker.Location = New System.Drawing.Point(203, 134)
+        Me.btnWeightTracker.Name = "btnWeightTracker"
+        Me.btnWeightTracker.Size = New System.Drawing.Size(75, 44)
+        Me.btnWeightTracker.TabIndex = 8
+        Me.btnWeightTracker.Text = "Weight Tracker"
+        Me.btnWeightTracker.UseVisualStyleBackColor = True
+        '
+        'btnWeekPlan
+        '
+        Me.btnWeekPlan.Location = New System.Drawing.Point(34, 189)
+        Me.btnWeekPlan.Name = "btnWeekPlan"
+        Me.btnWeekPlan.Size = New System.Drawing.Size(222, 36)
+        Me.btnWeekPlan.TabIndex = 9
+        Me.btnWeekPlan.Text = "Weekly Plan"
+        Me.btnWeekPlan.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
@@ -85,8 +110,8 @@ Partial Class WeightTrackerForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(499, 28)
-        Me.MenuStrip1.TabIndex = 5
+        Me.MenuStrip1.Size = New System.Drawing.Size(297, 28)
+        Me.MenuStrip1.TabIndex = 10
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
@@ -102,21 +127,23 @@ Partial Class WeightTrackerForm
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
-        'WeightTrackerForm
+        'UserInputForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(499, 393)
+        Me.ClientSize = New System.Drawing.Size(297, 243)
+        Me.Controls.Add(Me.btnWeekPlan)
+        Me.Controls.Add(Me.btnWeightTracker)
         Me.Controls.Add(Me.txtWeight)
+        Me.Controls.Add(Me.txtHeight)
+        Me.Controls.Add(Me.btnCalories)
+        Me.Controls.Add(Me.btnBMIBFP)
         Me.Controls.Add(Me.lblWeight)
-        Me.Controls.Add(Me.lblDate)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.dgvWeightTracker)
+        Me.Controls.Add(Me.lblHeight)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "WeightTrackerForm"
-        Me.Text = "WeightTrackerForm"
-        CType(Me.dgvWeightTracker, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "UserInputForm"
+        Me.Text = "User Input"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -124,11 +151,14 @@ Partial Class WeightTrackerForm
 
     End Sub
 
-    Friend WithEvents dgvWeightTracker As DataGridView
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents lblDate As Label
+    Friend WithEvents lblHeight As Label
     Friend WithEvents lblWeight As Label
+    Friend WithEvents btnBMIBFP As Button
+    Friend WithEvents btnCalories As Button
+    Friend WithEvents txtHeight As TextBox
     Friend WithEvents txtWeight As TextBox
+    Friend WithEvents btnWeightTracker As Button
+    Friend WithEvents btnWeekPlan As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem

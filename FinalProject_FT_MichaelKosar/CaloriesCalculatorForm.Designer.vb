@@ -32,6 +32,10 @@ Partial Class CaloriesCalculatorForm
         Me.btnExcercise = New System.Windows.Forms.Button()
         Me.btnCalCalories = New System.Windows.Forms.Button()
         Me.lblRemainingCalories = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'libFood
@@ -119,6 +123,29 @@ Partial Class CaloriesCalculatorForm
         Me.lblRemainingCalories.Size = New System.Drawing.Size(0, 17)
         Me.lblRemainingCalories.TabIndex = 12
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(591, 28)
+        Me.MenuStrip1.TabIndex = 13
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(44, 24)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
         'CaloriesCalculatorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -134,8 +161,12 @@ Partial Class CaloriesCalculatorForm
         Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.libExcercises)
         Me.Controls.Add(Me.libFood)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "CaloriesCalculatorForm"
         Me.Text = "CaloriesCalculatorForm"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -151,4 +182,7 @@ Partial Class CaloriesCalculatorForm
     Friend WithEvents btnExcercise As Button
     Friend WithEvents btnCalCalories As Button
     Friend WithEvents lblRemainingCalories As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
 End Class
