@@ -39,6 +39,7 @@ Partial Class BMIBFIForm
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnShow = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -187,14 +188,24 @@ Partial Class BMIBFIForm
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(108, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'btnShow
+        '
+        Me.btnShow.Location = New System.Drawing.Point(175, 75)
+        Me.btnShow.Name = "btnShow"
+        Me.btnShow.Size = New System.Drawing.Size(75, 23)
+        Me.btnShow.TabIndex = 16
+        Me.btnShow.Text = "Show"
+        Me.btnShow.UseVisualStyleBackColor = True
         '
         'BMIBFIForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(328, 294)
+        Me.Controls.Add(Me.btnShow)
         Me.Controls.Add(Me.lblIdealWeight)
         Me.Controls.Add(Me.lblCurrentWeight)
         Me.Controls.Add(Me.lblWeight)
@@ -237,4 +248,5 @@ Partial Class BMIBFIForm
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnShow As Button
 End Class
