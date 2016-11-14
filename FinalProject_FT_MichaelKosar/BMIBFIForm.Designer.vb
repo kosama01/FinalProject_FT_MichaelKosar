@@ -25,11 +25,8 @@ Partial Class BMIBFIForm
         Me.radMale = New System.Windows.Forms.RadioButton()
         Me.radFemale = New System.Windows.Forms.RadioButton()
         Me.lblBMI = New System.Windows.Forms.Label()
-        Me.lblBFP = New System.Windows.Forms.Label()
         Me.lblCurrBMI = New System.Windows.Forms.Label()
         Me.lblIdealBMI = New System.Windows.Forms.Label()
-        Me.lblCurrBFP = New System.Windows.Forms.Label()
-        Me.lblIdealBFP = New System.Windows.Forms.Label()
         Me.cboIdeal = New System.Windows.Forms.CheckBox()
         Me.lblCurrent = New System.Windows.Forms.Label()
         Me.lblIdeal = New System.Windows.Forms.Label()
@@ -77,15 +74,6 @@ Partial Class BMIBFIForm
         Me.lblBMI.TabIndex = 2
         Me.lblBMI.Text = "BMI"
         '
-        'lblBFP
-        '
-        Me.lblBFP.AutoSize = True
-        Me.lblBFP.Location = New System.Drawing.Point(33, 241)
-        Me.lblBFP.Name = "lblBFP"
-        Me.lblBFP.Size = New System.Drawing.Size(34, 17)
-        Me.lblBFP.TabIndex = 3
-        Me.lblBFP.Text = "BFP"
-        '
         'lblCurrBMI
         '
         Me.lblCurrBMI.AutoSize = True
@@ -101,22 +89,6 @@ Partial Class BMIBFIForm
         Me.lblIdealBMI.Name = "lblIdealBMI"
         Me.lblIdealBMI.Size = New System.Drawing.Size(0, 17)
         Me.lblIdealBMI.TabIndex = 5
-        '
-        'lblCurrBFP
-        '
-        Me.lblCurrBFP.AutoSize = True
-        Me.lblCurrBFP.Location = New System.Drawing.Point(116, 238)
-        Me.lblCurrBFP.Name = "lblCurrBFP"
-        Me.lblCurrBFP.Size = New System.Drawing.Size(0, 17)
-        Me.lblCurrBFP.TabIndex = 6
-        '
-        'lblIdealBFP
-        '
-        Me.lblIdealBFP.AutoSize = True
-        Me.lblIdealBFP.Location = New System.Drawing.Point(224, 238)
-        Me.lblIdealBFP.Name = "lblIdealBFP"
-        Me.lblIdealBFP.Size = New System.Drawing.Size(0, 17)
-        Me.lblIdealBFP.TabIndex = 7
         '
         'cboIdeal
         '
@@ -231,11 +203,8 @@ Partial Class BMIBFIForm
         Me.Controls.Add(Me.lblIdeal)
         Me.Controls.Add(Me.lblCurrent)
         Me.Controls.Add(Me.cboIdeal)
-        Me.Controls.Add(Me.lblIdealBFP)
-        Me.Controls.Add(Me.lblCurrBFP)
         Me.Controls.Add(Me.lblIdealBMI)
         Me.Controls.Add(Me.lblCurrBMI)
-        Me.Controls.Add(Me.lblBFP)
         Me.Controls.Add(Me.lblBMI)
         Me.Controls.Add(Me.radFemale)
         Me.Controls.Add(Me.radMale)
@@ -255,11 +224,8 @@ Partial Class BMIBFIForm
     Friend WithEvents radMale As RadioButton
     Friend WithEvents radFemale As RadioButton
     Friend WithEvents lblBMI As Label
-    Friend WithEvents lblBFP As Label
     Friend WithEvents lblCurrBMI As Label
     Friend WithEvents lblIdealBMI As Label
-    Friend WithEvents lblCurrBFP As Label
-    Friend WithEvents lblIdealBFP As Label
     Friend WithEvents cboIdeal As CheckBox
     Friend WithEvents lblCurrent As Label
     Friend WithEvents lblIdeal As Label
