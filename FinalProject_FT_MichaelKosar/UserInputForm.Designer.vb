@@ -56,18 +56,18 @@ Partial Class UserInputForm
         '
         'btnBMIBFP
         '
-        Me.btnBMIBFP.Location = New System.Drawing.Point(19, 134)
+        Me.btnBMIBFP.Location = New System.Drawing.Point(34, 139)
         Me.btnBMIBFP.Name = "btnBMIBFP"
-        Me.btnBMIBFP.Size = New System.Drawing.Size(75, 44)
+        Me.btnBMIBFP.Size = New System.Drawing.Size(222, 36)
         Me.btnBMIBFP.TabIndex = 4
         Me.btnBMIBFP.Text = "Calculate BMI/BFP"
         Me.btnBMIBFP.UseVisualStyleBackColor = True
         '
         'btnCalories
         '
-        Me.btnCalories.Location = New System.Drawing.Point(110, 134)
+        Me.btnCalories.Location = New System.Drawing.Point(34, 181)
         Me.btnCalories.Name = "btnCalories"
-        Me.btnCalories.Size = New System.Drawing.Size(75, 44)
+        Me.btnCalories.Size = New System.Drawing.Size(222, 36)
         Me.btnCalories.TabIndex = 5
         Me.btnCalories.Text = "Calculate Calories"
         Me.btnCalories.UseVisualStyleBackColor = True
@@ -88,16 +88,16 @@ Partial Class UserInputForm
         '
         'btnWeightTracker
         '
-        Me.btnWeightTracker.Location = New System.Drawing.Point(203, 134)
+        Me.btnWeightTracker.Location = New System.Drawing.Point(34, 223)
         Me.btnWeightTracker.Name = "btnWeightTracker"
-        Me.btnWeightTracker.Size = New System.Drawing.Size(75, 44)
+        Me.btnWeightTracker.Size = New System.Drawing.Size(222, 36)
         Me.btnWeightTracker.TabIndex = 8
         Me.btnWeightTracker.Text = "Weight Tracker"
         Me.btnWeightTracker.UseVisualStyleBackColor = True
         '
         'btnWeekPlan
         '
-        Me.btnWeekPlan.Location = New System.Drawing.Point(34, 189)
+        Me.btnWeekPlan.Location = New System.Drawing.Point(34, 265)
         Me.btnWeekPlan.Name = "btnWeekPlan"
         Me.btnWeekPlan.Size = New System.Drawing.Size(222, 36)
         Me.btnWeekPlan.TabIndex = 9
@@ -110,7 +110,7 @@ Partial Class UserInputForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(297, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(305, 28)
         Me.MenuStrip1.TabIndex = 10
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -124,14 +124,14 @@ Partial Class UserInputForm
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(108, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'UserInputForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(297, 243)
+        Me.ClientSize = New System.Drawing.Size(305, 326)
         Me.Controls.Add(Me.btnWeekPlan)
         Me.Controls.Add(Me.btnWeightTracker)
         Me.Controls.Add(Me.txtWeight)

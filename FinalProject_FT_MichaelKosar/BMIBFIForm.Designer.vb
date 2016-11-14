@@ -40,7 +40,10 @@ Partial Class BMIBFIForm
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnShow = New System.Windows.Forms.Button()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'radMale
@@ -200,11 +203,27 @@ Partial Class BMIBFIForm
         Me.btnShow.Text = "Show"
         Me.btnShow.UseVisualStyleBackColor = True
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 270)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(328, 24)
+        Me.StatusStrip1.TabIndex = 17
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'lblStatus
+        '
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(0, 19)
+        '
         'BMIBFIForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(328, 294)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btnShow)
         Me.Controls.Add(Me.lblIdealWeight)
         Me.Controls.Add(Me.lblCurrentWeight)
@@ -226,6 +245,8 @@ Partial Class BMIBFIForm
         Me.Text = "BMIBFIForm"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -249,4 +270,6 @@ Partial Class BMIBFIForm
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnShow As Button
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents lblStatus As ToolStripStatusLabel
 End Class
