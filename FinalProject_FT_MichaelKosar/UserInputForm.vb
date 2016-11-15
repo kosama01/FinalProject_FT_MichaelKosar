@@ -1,17 +1,14 @@
 ﻿Public Class UserInputForm
-    'Private userWeight As Decimal
-    'Private userHeight As Decimal
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
     End Sub
-
-    Private Sub btnBMIBFP_Click(sender As Object, e As EventArgs) Handles btnBMIBFP.Click
+    Private Sub btnBMIBFP_Click(sender As Object, e As EventArgs) Handles btnBMI.Click
         Try
-            BMIBFIForm.userHeight = CDec(txtHeight.Text)
-            BMIBFIForm.userWeight = CDec(txtWeight.Text)
-            BMIBFIForm.ShowDialog()
+            BMIForm.userHeight = CDec(txtHeightft.Text) * 12 + CDec(txtHeightin.Text)
+            BMIForm.userWeight = CDec(txtWeight.Text)
+            BMIForm.ShowDialog()
         Catch ex As Exception
-            MessageBox.Show("Height oe Weight not correctly entered")
+            MessageBox.Show("Height or Weight not correctly entered")
         End Try
 
 

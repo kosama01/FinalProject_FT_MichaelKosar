@@ -24,15 +24,18 @@ Partial Class UserInputForm
     Private Sub InitializeComponent()
         Me.lblHeight = New System.Windows.Forms.Label()
         Me.lblWeight = New System.Windows.Forms.Label()
-        Me.btnBMIBFP = New System.Windows.Forms.Button()
+        Me.btnBMI = New System.Windows.Forms.Button()
         Me.btnCalories = New System.Windows.Forms.Button()
-        Me.txtHeight = New System.Windows.Forms.TextBox()
+        Me.txtHeightft = New System.Windows.Forms.TextBox()
         Me.txtWeight = New System.Windows.Forms.TextBox()
         Me.btnWeightTracker = New System.Windows.Forms.Button()
         Me.btnWeekPlan = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.txtHeightin = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,14 +57,14 @@ Partial Class UserInputForm
         Me.lblWeight.TabIndex = 1
         Me.lblWeight.Text = "Weight"
         '
-        'btnBMIBFP
+        'btnBMI
         '
-        Me.btnBMIBFP.Location = New System.Drawing.Point(34, 139)
-        Me.btnBMIBFP.Name = "btnBMIBFP"
-        Me.btnBMIBFP.Size = New System.Drawing.Size(222, 36)
-        Me.btnBMIBFP.TabIndex = 4
-        Me.btnBMIBFP.Text = "Calculate BMI/BFP"
-        Me.btnBMIBFP.UseVisualStyleBackColor = True
+        Me.btnBMI.Location = New System.Drawing.Point(34, 139)
+        Me.btnBMI.Name = "btnBMI"
+        Me.btnBMI.Size = New System.Drawing.Size(222, 36)
+        Me.btnBMI.TabIndex = 4
+        Me.btnBMI.Text = "Calculate BMI"
+        Me.btnBMI.UseVisualStyleBackColor = True
         '
         'btnCalories
         '
@@ -72,12 +75,13 @@ Partial Class UserInputForm
         Me.btnCalories.Text = "Calculate Calories"
         Me.btnCalories.UseVisualStyleBackColor = True
         '
-        'txtHeight
+        'txtHeightft
         '
-        Me.txtHeight.Location = New System.Drawing.Point(134, 36)
-        Me.txtHeight.Name = "txtHeight"
-        Me.txtHeight.Size = New System.Drawing.Size(100, 22)
-        Me.txtHeight.TabIndex = 6
+        Me.txtHeightft.Location = New System.Drawing.Point(134, 36)
+        Me.txtHeightft.Name = "txtHeightft"
+        Me.txtHeightft.Size = New System.Drawing.Size(34, 22)
+        Me.txtHeightft.TabIndex = 6
+        Me.txtHeightft.Text = "0"
         '
         'txtWeight
         '
@@ -85,6 +89,7 @@ Partial Class UserInputForm
         Me.txtWeight.Name = "txtWeight"
         Me.txtWeight.Size = New System.Drawing.Size(100, 22)
         Me.txtWeight.TabIndex = 7
+        Me.txtWeight.Text = "0"
         '
         'btnWeightTracker
         '
@@ -127,17 +132,46 @@ Partial Class UserInputForm
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(108, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
+        'txtHeightin
+        '
+        Me.txtHeightin.Location = New System.Drawing.Point(202, 36)
+        Me.txtHeightin.Name = "txtHeightin"
+        Me.txtHeightin.Size = New System.Drawing.Size(29, 22)
+        Me.txtHeightin.TabIndex = 11
+        Me.txtHeightin.Text = "0"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(174, 41)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(20, 17)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "ft."
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(237, 41)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(19, 17)
+        Me.Label2.TabIndex = 13
+        Me.Label2.Text = "in"
+        '
         'UserInputForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(305, 326)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtHeightin)
         Me.Controls.Add(Me.btnWeekPlan)
         Me.Controls.Add(Me.btnWeightTracker)
         Me.Controls.Add(Me.txtWeight)
-        Me.Controls.Add(Me.txtHeight)
+        Me.Controls.Add(Me.txtHeightft)
         Me.Controls.Add(Me.btnCalories)
-        Me.Controls.Add(Me.btnBMIBFP)
+        Me.Controls.Add(Me.btnBMI)
         Me.Controls.Add(Me.lblWeight)
         Me.Controls.Add(Me.lblHeight)
         Me.Controls.Add(Me.MenuStrip1)
@@ -153,13 +187,16 @@ Partial Class UserInputForm
 
     Friend WithEvents lblHeight As Label
     Friend WithEvents lblWeight As Label
-    Friend WithEvents btnBMIBFP As Button
+    Friend WithEvents btnBMI As Button
     Friend WithEvents btnCalories As Button
-    Friend WithEvents txtHeight As TextBox
+    Friend WithEvents txtHeightft As TextBox
     Friend WithEvents txtWeight As TextBox
     Friend WithEvents btnWeightTracker As Button
     Friend WithEvents btnWeekPlan As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents txtHeightin As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
