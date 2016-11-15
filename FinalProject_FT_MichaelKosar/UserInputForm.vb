@@ -13,4 +13,16 @@
 
 
     End Sub
+
+    Private Sub btnWeightTracker_Click(sender As Object, e As EventArgs) Handles btnWeightTracker.Click
+        WeightTrackerForm.ShowDialog()
+    End Sub
+
+    Private Sub btnCalories_Click(sender As Object, e As EventArgs) Handles btnCalories.Click
+        CaloriesCalculatorForm.ShowDialog()
+    End Sub
+
+    Private Sub btnWeekPlan_Click(sender As Object, e As EventArgs) Handles btnWeekPlan.Click
+        WeeklyPlanForm.ShowDialog()
+    End Sub
 End Class
