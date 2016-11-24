@@ -28,13 +28,20 @@ Partial Class CaloriesCalculatorForm
         Me.lblCalories = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.txtCalories = New System.Windows.Forms.TextBox()
-        Me.btnFood = New System.Windows.Forms.Button()
-        Me.btnExcercise = New System.Windows.Forms.Button()
+        Me.btnAddFood = New System.Windows.Forms.Button()
+        Me.btnAddExcercise = New System.Windows.Forms.Button()
         Me.btnCalCalories = New System.Windows.Forms.Button()
         Me.lblRemainingCalories = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnRemoveFood = New System.Windows.Forms.Button()
+        Me.btnRemoveExcercise = New System.Windows.Forms.Button()
+        Me.radMale = New System.Windows.Forms.RadioButton()
+        Me.radFemale = New System.Windows.Forms.RadioButton()
+        Me.lblAge = New System.Windows.Forms.Label()
+        Me.txtAge = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -68,7 +75,7 @@ Partial Class CaloriesCalculatorForm
         'lblCalories
         '
         Me.lblCalories.AutoSize = True
-        Me.lblCalories.Location = New System.Drawing.Point(23, 91)
+        Me.lblCalories.Location = New System.Drawing.Point(23, 83)
         Me.lblCalories.Name = "lblCalories"
         Me.lblCalories.Size = New System.Drawing.Size(59, 17)
         Me.lblCalories.TabIndex = 6
@@ -83,32 +90,32 @@ Partial Class CaloriesCalculatorForm
         '
         'txtCalories
         '
-        Me.txtCalories.Location = New System.Drawing.Point(126, 86)
+        Me.txtCalories.Location = New System.Drawing.Point(126, 78)
         Me.txtCalories.Name = "txtCalories"
         Me.txtCalories.Size = New System.Drawing.Size(100, 22)
         Me.txtCalories.TabIndex = 8
         '
-        'btnFood
+        'btnAddFood
         '
-        Me.btnFood.Location = New System.Drawing.Point(34, 142)
-        Me.btnFood.Name = "btnFood"
-        Me.btnFood.Size = New System.Drawing.Size(86, 23)
-        Me.btnFood.TabIndex = 9
-        Me.btnFood.Text = "Add Food"
-        Me.btnFood.UseVisualStyleBackColor = True
+        Me.btnAddFood.Location = New System.Drawing.Point(26, 130)
+        Me.btnAddFood.Name = "btnAddFood"
+        Me.btnAddFood.Size = New System.Drawing.Size(86, 23)
+        Me.btnAddFood.TabIndex = 9
+        Me.btnAddFood.Text = "Add Food"
+        Me.btnAddFood.UseVisualStyleBackColor = True
         '
-        'btnExcercise
+        'btnAddExcercise
         '
-        Me.btnExcercise.Location = New System.Drawing.Point(141, 142)
-        Me.btnExcercise.Name = "btnExcercise"
-        Me.btnExcercise.Size = New System.Drawing.Size(110, 23)
-        Me.btnExcercise.TabIndex = 10
-        Me.btnExcercise.Text = "Add Excercise"
-        Me.btnExcercise.UseVisualStyleBackColor = True
+        Me.btnAddExcercise.Location = New System.Drawing.Point(133, 130)
+        Me.btnAddExcercise.Name = "btnAddExcercise"
+        Me.btnAddExcercise.Size = New System.Drawing.Size(110, 23)
+        Me.btnAddExcercise.TabIndex = 10
+        Me.btnAddExcercise.Text = "Add Excercise"
+        Me.btnAddExcercise.UseVisualStyleBackColor = True
         '
         'btnCalCalories
         '
-        Me.btnCalCalories.Location = New System.Drawing.Point(34, 253)
+        Me.btnCalCalories.Location = New System.Drawing.Point(26, 289)
         Me.btnCalCalories.Name = "btnCalCalories"
         Me.btnCalCalories.Size = New System.Drawing.Size(217, 38)
         Me.btnCalCalories.TabIndex = 11
@@ -118,7 +125,7 @@ Partial Class CaloriesCalculatorForm
         'lblRemainingCalories
         '
         Me.lblRemainingCalories.AutoSize = True
-        Me.lblRemainingCalories.Location = New System.Drawing.Point(87, 303)
+        Me.lblRemainingCalories.Location = New System.Drawing.Point(243, 351)
         Me.lblRemainingCalories.Name = "lblRemainingCalories"
         Me.lblRemainingCalories.Size = New System.Drawing.Size(0, 17)
         Me.lblRemainingCalories.TabIndex = 12
@@ -143,18 +150,90 @@ Partial Class CaloriesCalculatorForm
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(108, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'btnRemoveFood
+        '
+        Me.btnRemoveFood.Location = New System.Drawing.Point(26, 159)
+        Me.btnRemoveFood.Name = "btnRemoveFood"
+        Me.btnRemoveFood.Size = New System.Drawing.Size(86, 45)
+        Me.btnRemoveFood.TabIndex = 14
+        Me.btnRemoveFood.Text = "Remove Food"
+        Me.btnRemoveFood.UseVisualStyleBackColor = True
+        '
+        'btnRemoveExcercise
+        '
+        Me.btnRemoveExcercise.Location = New System.Drawing.Point(133, 159)
+        Me.btnRemoveExcercise.Name = "btnRemoveExcercise"
+        Me.btnRemoveExcercise.Size = New System.Drawing.Size(110, 45)
+        Me.btnRemoveExcercise.TabIndex = 15
+        Me.btnRemoveExcercise.Text = "Remove Excercise"
+        Me.btnRemoveExcercise.UseVisualStyleBackColor = True
+        '
+        'radMale
+        '
+        Me.radMale.AutoSize = True
+        Me.radMale.Location = New System.Drawing.Point(43, 255)
+        Me.radMale.Name = "radMale"
+        Me.radMale.Size = New System.Drawing.Size(59, 21)
+        Me.radMale.TabIndex = 16
+        Me.radMale.TabStop = True
+        Me.radMale.Text = "Male"
+        Me.radMale.UseVisualStyleBackColor = True
+        '
+        'radFemale
+        '
+        Me.radFemale.AutoSize = True
+        Me.radFemale.Location = New System.Drawing.Point(141, 255)
+        Me.radFemale.Name = "radFemale"
+        Me.radFemale.Size = New System.Drawing.Size(75, 21)
+        Me.radFemale.TabIndex = 17
+        Me.radFemale.TabStop = True
+        Me.radFemale.Text = "Female"
+        Me.radFemale.UseVisualStyleBackColor = True
+        '
+        'lblAge
+        '
+        Me.lblAge.AutoSize = True
+        Me.lblAge.Location = New System.Drawing.Point(40, 230)
+        Me.lblAge.Name = "lblAge"
+        Me.lblAge.Size = New System.Drawing.Size(37, 17)
+        Me.lblAge.TabIndex = 18
+        Me.lblAge.Text = "Age:"
+        '
+        'txtAge
+        '
+        Me.txtAge.Location = New System.Drawing.Point(133, 227)
+        Me.txtAge.Name = "txtAge"
+        Me.txtAge.Size = New System.Drawing.Size(100, 22)
+        Me.txtAge.TabIndex = 19
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(61, 351)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(132, 17)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Remaining calories:"
         '
         'CaloriesCalculatorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(591, 404)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtAge)
+        Me.Controls.Add(Me.lblAge)
+        Me.Controls.Add(Me.radFemale)
+        Me.Controls.Add(Me.radMale)
+        Me.Controls.Add(Me.btnRemoveExcercise)
+        Me.Controls.Add(Me.btnRemoveFood)
         Me.Controls.Add(Me.lblRemainingCalories)
         Me.Controls.Add(Me.btnCalCalories)
-        Me.Controls.Add(Me.btnExcercise)
-        Me.Controls.Add(Me.btnFood)
+        Me.Controls.Add(Me.btnAddExcercise)
+        Me.Controls.Add(Me.btnAddFood)
         Me.Controls.Add(Me.txtCalories)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.lblCalories)
@@ -178,11 +257,18 @@ Partial Class CaloriesCalculatorForm
     Friend WithEvents lblCalories As Label
     Friend WithEvents txtName As TextBox
     Friend WithEvents txtCalories As TextBox
-    Friend WithEvents btnFood As Button
-    Friend WithEvents btnExcercise As Button
+    Friend WithEvents btnAddFood As Button
+    Friend WithEvents btnAddExcercise As Button
     Friend WithEvents btnCalCalories As Button
     Friend WithEvents lblRemainingCalories As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnRemoveFood As Button
+    Friend WithEvents btnRemoveExcercise As Button
+    Friend WithEvents radMale As RadioButton
+    Friend WithEvents radFemale As RadioButton
+    Friend WithEvents lblAge As Label
+    Friend WithEvents txtAge As TextBox
+    Friend WithEvents Label1 As Label
 End Class

@@ -84,6 +84,8 @@
     <Compile Include="CaloriesCalculatorForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Excercise.vb" />
+    <Compile Include="Food.vb" />
     <Compile Include="UserInputForm.vb">
       <SubType>Form</SubType>
     </Compile>

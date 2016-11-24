@@ -45,7 +45,7 @@ Partial Class BMIForm
         '
         Me.lblBMI.AutoSize = True
         Me.lblBMI.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBMI.Location = New System.Drawing.Point(226, 117)
+        Me.lblBMI.Location = New System.Drawing.Point(243, 117)
         Me.lblBMI.Name = "lblBMI"
         Me.lblBMI.Size = New System.Drawing.Size(47, 25)
         Me.lblBMI.TabIndex = 2
@@ -55,7 +55,7 @@ Partial Class BMIForm
         '
         Me.lblCurrBMI.AutoSize = True
         Me.lblCurrBMI.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCurrBMI.Location = New System.Drawing.Point(226, 160)
+        Me.lblCurrBMI.Location = New System.Drawing.Point(243, 160)
         Me.lblCurrBMI.Name = "lblCurrBMI"
         Me.lblCurrBMI.Size = New System.Drawing.Size(0, 25)
         Me.lblCurrBMI.TabIndex = 4
@@ -64,7 +64,7 @@ Partial Class BMIForm
         '
         Me.lblIdealBMI.AutoSize = True
         Me.lblIdealBMI.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdealBMI.Location = New System.Drawing.Point(226, 198)
+        Me.lblIdealBMI.Location = New System.Drawing.Point(243, 198)
         Me.lblIdealBMI.Name = "lblIdealBMI"
         Me.lblIdealBMI.Size = New System.Drawing.Size(0, 25)
         Me.lblIdealBMI.TabIndex = 5
@@ -123,7 +123,7 @@ Partial Class BMIForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(344, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(359, 28)
         Me.MenuStrip1.TabIndex = 15
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -154,9 +154,9 @@ Partial Class BMIForm
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 353)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 273)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(344, 24)
+        Me.StatusStrip1.Size = New System.Drawing.Size(359, 22)
         Me.StatusStrip1.TabIndex = 17
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -164,7 +164,7 @@ Partial Class BMIForm
         '
         Me.lblStatus.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(0, 19)
+        Me.lblStatus.Size = New System.Drawing.Size(0, 17)
         '
         'cboNormalBMI
         '
@@ -181,7 +181,7 @@ Partial Class BMIForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(344, 377)
+        Me.ClientSize = New System.Drawing.Size(359, 295)
         Me.Controls.Add(Me.cboNormalBMI)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btnShow)
