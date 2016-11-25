@@ -1,7 +1,7 @@
 ﻿Public Class CaloriesCalculatorForm
     Public userWeight As Decimal
     Public userHeight As Decimal
-    Private excercises As List(Of Excercise)
+    Private excercises As New List(Of Excercise)
     Private foods As New List(Of Food)
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
@@ -10,35 +10,47 @@
     Private Sub FillListBoxes()
         libFood.Items.Clear()
         libExcercises.Items.Clear()
-        For Each f In foods
-            libFood.Items.Add(f)
-        Next
-        For Each e In excercises
-            libExcercises.Items.Add(e)
-        Next
+        If foods.Count > 0 Then
+            For Each f In foods
+                libFood.Items.Add(f)
+            Next
+        End If
+        If excercises.Count > 0 Then
+            For Each e In excercises
+                libExcercises.Items.Add(e)
+            Next
+        End If
         txtName.Text = ""
         txtCalories.Text = ""
     End Sub
     'Add food to list
     Private Sub btnAddFood_Click(sender As Object, e As EventArgs) Handles btnAddFood.Click
-        Dim food As Food = New Food(txtName.Text, CDec(txtCalories.Text))
-        foods.Add(food)
-        FillListBoxes()
+        Try
+            Dim food As Food = New Food(txtName.Text, CDec(txtCalories.Text))
+            foods.Add(food)
+            FillListBoxes()
+        Catch ex As Exception
+            MessageBox.Show("Format for calories was entered incorreclty, the value most be a number")
+        End Try
     End Sub
     'Add excercise to list
     Private Sub btnAddExcercise_Click(sender As Object, e As EventArgs) Handles btnAddExcercise.Click
-        Dim excercise As Excercise = New Excercise(txtName.Text, CDec(txtCalories.Text))
-        excercises.Add(excercise)
-        FillListBoxes()
+        Try
+            Dim excercise As Excercise = New Excercise(txtName.Text, CDec(txtCalories.Text))
+            excercises.Add(excercise)
+            FillListBoxes()
+        Catch ex As Exception
+            MessageBox.Show("Format for calories was entered incorreclty, the value most be a number")
+        End Try
     End Sub
     'Removes food from list
     Private Sub btnRemoveFood_Click(sender As Object, e As EventArgs) Handles btnRemoveFood.Click
-        libFood.Items.Remove(libFood.SelectedItem)
+        foods.Remove(libFood.SelectedItem)
         FillListBoxes()
     End Sub
     'Removes excercise from list
     Private Sub btnRemoveExcercise_Click(sender As Object, e As EventArgs) Handles btnRemoveExcercise.Click
-        libExcercises.Items.Remove(libExcercises.SelectedItem)
+        excercises.Remove(libExcercises.SelectedItem)
         FillListBoxes()
     End Sub
 
@@ -47,6 +59,8 @@
         Dim metricWeight As Decimal = 0.453 * userWeight
         Dim metricHeight As Decimal = 0.0254 * userHeight
         Dim age As Integer
+        Dim calExcercise As Decimal = 0
+        Dim calFood As Decimal = 0
         Try
             age = CInt(txtAge.Text)
         Catch ex As Exception
@@ -61,6 +75,22 @@
             MessageBox.Show("Gender must be selected")
             Return
         End If
+        If foods.Count > 0 Then
+            For Each f In foods
+                calFood += f.Calories
+            Next
+        End If
+        If excercises.Count > 0 Then
+            For Each exc In excercises
+                calExcercise += exc.Calories
+            Next
+        End If
+        dailyCalories = dailyCalories + calExcercise - calFood
         lblRemainingCalories.Text = dailyCalories & " calories left"
+    End Sub
+
+    Private Sub CaloriesCalculatorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblWeight.Text = userWeight
+        lblHeight.Text = CInt(userHeight / 12) & "ft " & (userHeight Mod 12) & "in"
     End Sub
 End Class

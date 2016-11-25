@@ -1,7 +1,7 @@
 ﻿Public Class Food
     Private mName As String
     Private mCalories As Decimal
-    Public ReadOnly Property Name() As Integer
+    Public ReadOnly Property Name() As String
         Get
             Return mName
         End Get

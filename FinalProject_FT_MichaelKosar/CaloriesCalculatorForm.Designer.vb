@@ -42,6 +42,10 @@ Partial Class CaloriesCalculatorForm
         Me.lblAge = New System.Windows.Forms.Label()
         Me.txtAge = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblWeight = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblHeight = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,7 +53,7 @@ Partial Class CaloriesCalculatorForm
         '
         Me.libFood.FormattingEnabled = True
         Me.libFood.ItemHeight = 16
-        Me.libFood.Location = New System.Drawing.Point(351, 37)
+        Me.libFood.Location = New System.Drawing.Point(351, 104)
         Me.libFood.Name = "libFood"
         Me.libFood.Size = New System.Drawing.Size(186, 116)
         Me.libFood.TabIndex = 3
@@ -58,7 +62,7 @@ Partial Class CaloriesCalculatorForm
         '
         Me.libExcercises.FormattingEnabled = True
         Me.libExcercises.ItemHeight = 16
-        Me.libExcercises.Location = New System.Drawing.Point(350, 195)
+        Me.libExcercises.Location = New System.Drawing.Point(351, 236)
         Me.libExcercises.Name = "libExcercises"
         Me.libExcercises.Size = New System.Drawing.Size(187, 132)
         Me.libExcercises.TabIndex = 4
@@ -125,7 +129,7 @@ Partial Class CaloriesCalculatorForm
         'lblRemainingCalories
         '
         Me.lblRemainingCalories.AutoSize = True
-        Me.lblRemainingCalories.Location = New System.Drawing.Point(243, 351)
+        Me.lblRemainingCalories.Location = New System.Drawing.Point(205, 351)
         Me.lblRemainingCalories.Name = "lblRemainingCalories"
         Me.lblRemainingCalories.Size = New System.Drawing.Size(0, 17)
         Me.lblRemainingCalories.TabIndex = 12
@@ -212,17 +216,55 @@ Partial Class CaloriesCalculatorForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(61, 351)
+        Me.Label1.Location = New System.Drawing.Point(23, 351)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(132, 17)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Remaining calories:"
+        '
+        'lblWeight
+        '
+        Me.lblWeight.AutoSize = True
+        Me.lblWeight.Location = New System.Drawing.Point(348, 67)
+        Me.lblWeight.Name = "lblWeight"
+        Me.lblWeight.Size = New System.Drawing.Size(0, 17)
+        Me.lblWeight.TabIndex = 21
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(348, 41)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(52, 17)
+        Me.Label3.TabIndex = 22
+        Me.Label3.Text = "Weight"
+        '
+        'lblHeight
+        '
+        Me.lblHeight.AutoSize = True
+        Me.lblHeight.Location = New System.Drawing.Point(454, 67)
+        Me.lblHeight.Name = "lblHeight"
+        Me.lblHeight.Size = New System.Drawing.Size(0, 17)
+        Me.lblHeight.TabIndex = 23
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(454, 41)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(49, 17)
+        Me.Label5.TabIndex = 24
+        Me.Label5.Text = "Height"
         '
         'CaloriesCalculatorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(591, 404)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.lblHeight)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lblWeight)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtAge)
         Me.Controls.Add(Me.lblAge)
@@ -271,4 +313,8 @@ Partial Class CaloriesCalculatorForm
     Friend WithEvents lblAge As Label
     Friend WithEvents txtAge As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents lblWeight As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lblHeight As Label
+    Friend WithEvents Label5 As Label
 End Class
