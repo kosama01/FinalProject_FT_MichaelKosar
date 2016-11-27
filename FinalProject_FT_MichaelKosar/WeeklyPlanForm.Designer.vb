@@ -37,13 +37,15 @@ Partial Class WeeklyPlanForm
         Me.btnRemoveActivity = New System.Windows.Forms.Button()
         Me.lblActivityName = New System.Windows.Forms.Label()
         Me.txtActivityName = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.MenuStrip1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'radMonday
         '
         Me.radMonday.AutoSize = True
-        Me.radMonday.Location = New System.Drawing.Point(36, 39)
+        Me.radMonday.Location = New System.Drawing.Point(12, 40)
         Me.radMonday.Name = "radMonday"
         Me.radMonday.Size = New System.Drawing.Size(79, 21)
         Me.radMonday.TabIndex = 0
@@ -54,7 +56,7 @@ Partial Class WeeklyPlanForm
         'radTuesday
         '
         Me.radTuesday.AutoSize = True
-        Me.radTuesday.Location = New System.Drawing.Point(36, 79)
+        Me.radTuesday.Location = New System.Drawing.Point(7, 79)
         Me.radTuesday.Name = "radTuesday"
         Me.radTuesday.Size = New System.Drawing.Size(84, 21)
         Me.radTuesday.TabIndex = 1
@@ -65,7 +67,7 @@ Partial Class WeeklyPlanForm
         'radFriday
         '
         Me.radFriday.AutoSize = True
-        Me.radFriday.Location = New System.Drawing.Point(212, 75)
+        Me.radFriday.Location = New System.Drawing.Point(183, 46)
         Me.radFriday.Name = "radFriday"
         Me.radFriday.Size = New System.Drawing.Size(68, 21)
         Me.radFriday.TabIndex = 2
@@ -76,7 +78,7 @@ Partial Class WeeklyPlanForm
         'radThursday
         '
         Me.radThursday.AutoSize = True
-        Me.radThursday.Location = New System.Drawing.Point(212, 39)
+        Me.radThursday.Location = New System.Drawing.Point(183, 13)
         Me.radThursday.Name = "radThursday"
         Me.radThursday.Size = New System.Drawing.Size(89, 21)
         Me.radThursday.TabIndex = 3
@@ -87,7 +89,7 @@ Partial Class WeeklyPlanForm
         'radWednesday
         '
         Me.radWednesday.AutoSize = True
-        Me.radWednesday.Location = New System.Drawing.Point(36, 120)
+        Me.radWednesday.Location = New System.Drawing.Point(7, 115)
         Me.radWednesday.Name = "radWednesday"
         Me.radWednesday.Size = New System.Drawing.Size(104, 21)
         Me.radWednesday.TabIndex = 4
@@ -98,7 +100,7 @@ Partial Class WeeklyPlanForm
         'radSunday
         '
         Me.radSunday.AutoSize = True
-        Me.radSunday.Location = New System.Drawing.Point(212, 150)
+        Me.radSunday.Location = New System.Drawing.Point(183, 115)
         Me.radSunday.Name = "radSunday"
         Me.radSunday.Size = New System.Drawing.Size(77, 21)
         Me.radSunday.TabIndex = 5
@@ -109,7 +111,7 @@ Partial Class WeeklyPlanForm
         'radSaturday
         '
         Me.radSaturday.AutoSize = True
-        Me.radSaturday.Location = New System.Drawing.Point(212, 114)
+        Me.radSaturday.Location = New System.Drawing.Point(183, 79)
         Me.radSaturday.Name = "radSaturday"
         Me.radSaturday.Size = New System.Drawing.Size(86, 21)
         Me.radSaturday.TabIndex = 6
@@ -144,14 +146,14 @@ Partial Class WeeklyPlanForm
         '
         Me.libDailyActivities.FormattingEnabled = True
         Me.libDailyActivities.ItemHeight = 16
-        Me.libDailyActivities.Location = New System.Drawing.Point(30, 294)
+        Me.libDailyActivities.Location = New System.Drawing.Point(32, 300)
         Me.libDailyActivities.Name = "libDailyActivities"
         Me.libDailyActivities.Size = New System.Drawing.Size(306, 116)
         Me.libDailyActivities.TabIndex = 9
         '
         'btnAddActivity
         '
-        Me.btnAddActivity.Location = New System.Drawing.Point(52, 228)
+        Me.btnAddActivity.Location = New System.Drawing.Point(54, 234)
         Me.btnAddActivity.Name = "btnAddActivity"
         Me.btnAddActivity.Size = New System.Drawing.Size(106, 47)
         Me.btnAddActivity.TabIndex = 10
@@ -160,7 +162,7 @@ Partial Class WeeklyPlanForm
         '
         'btnRemoveActivity
         '
-        Me.btnRemoveActivity.Location = New System.Drawing.Point(205, 228)
+        Me.btnRemoveActivity.Location = New System.Drawing.Point(207, 234)
         Me.btnRemoveActivity.Name = "btnRemoveActivity"
         Me.btnRemoveActivity.Size = New System.Drawing.Size(131, 47)
         Me.btnRemoveActivity.TabIndex = 11
@@ -170,7 +172,7 @@ Partial Class WeeklyPlanForm
         'lblActivityName
         '
         Me.lblActivityName.AutoSize = True
-        Me.lblActivityName.Location = New System.Drawing.Point(49, 193)
+        Me.lblActivityName.Location = New System.Drawing.Point(28, 202)
         Me.lblActivityName.Name = "lblActivityName"
         Me.lblActivityName.Size = New System.Drawing.Size(93, 17)
         Me.lblActivityName.TabIndex = 12
@@ -178,34 +180,46 @@ Partial Class WeeklyPlanForm
         '
         'txtActivityName
         '
-        Me.txtActivityName.Location = New System.Drawing.Point(205, 193)
+        Me.txtActivityName.Location = New System.Drawing.Point(127, 199)
         Me.txtActivityName.Name = "txtActivityName"
-        Me.txtActivityName.Size = New System.Drawing.Size(100, 22)
+        Me.txtActivityName.Size = New System.Drawing.Size(211, 22)
         Me.txtActivityName.TabIndex = 13
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.radSaturday)
+        Me.GroupBox1.Controls.Add(Me.radSunday)
+        Me.GroupBox1.Controls.Add(Me.radWednesday)
+        Me.GroupBox1.Controls.Add(Me.radThursday)
+        Me.GroupBox1.Controls.Add(Me.radFriday)
+        Me.GroupBox1.Controls.Add(Me.radTuesday)
+        Me.GroupBox1.Controls.Add(Me.radMonday)
+        Me.GroupBox1.Location = New System.Drawing.Point(31, 41)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(289, 146)
+        Me.GroupBox1.TabIndex = 14
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Day of The Week"
         '
         'WeeklyPlanForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(382, 422)
+        Me.ClientSize = New System.Drawing.Size(382, 427)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtActivityName)
         Me.Controls.Add(Me.lblActivityName)
         Me.Controls.Add(Me.btnRemoveActivity)
         Me.Controls.Add(Me.btnAddActivity)
         Me.Controls.Add(Me.libDailyActivities)
-        Me.Controls.Add(Me.radSaturday)
-        Me.Controls.Add(Me.radSunday)
-        Me.Controls.Add(Me.radWednesday)
-        Me.Controls.Add(Me.radThursday)
-        Me.Controls.Add(Me.radFriday)
-        Me.Controls.Add(Me.radTuesday)
-        Me.Controls.Add(Me.radMonday)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "WeeklyPlanForm"
         Me.Text = "WeeklyPlanForm"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -226,4 +240,5 @@ Partial Class WeeklyPlanForm
     Friend WithEvents btnRemoveActivity As Button
     Friend WithEvents lblActivityName As Label
     Friend WithEvents txtActivityName As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

@@ -112,7 +112,7 @@ Partial Class CaloriesCalculatorForm
         '
         Me.btnAddExcercise.Location = New System.Drawing.Point(133, 130)
         Me.btnAddExcercise.Name = "btnAddExcercise"
-        Me.btnAddExcercise.Size = New System.Drawing.Size(110, 23)
+        Me.btnAddExcercise.Size = New System.Drawing.Size(129, 23)
         Me.btnAddExcercise.TabIndex = 10
         Me.btnAddExcercise.Text = "Add Excercise"
         Me.btnAddExcercise.UseVisualStyleBackColor = True
@@ -170,7 +170,7 @@ Partial Class CaloriesCalculatorForm
         '
         Me.btnRemoveExcercise.Location = New System.Drawing.Point(133, 159)
         Me.btnRemoveExcercise.Name = "btnRemoveExcercise"
-        Me.btnRemoveExcercise.Size = New System.Drawing.Size(110, 45)
+        Me.btnRemoveExcercise.Size = New System.Drawing.Size(129, 45)
         Me.btnRemoveExcercise.TabIndex = 15
         Me.btnRemoveExcercise.Text = "Remove Excercise"
         Me.btnRemoveExcercise.UseVisualStyleBackColor = True
