@@ -45,7 +45,7 @@ Partial Class WeeklyPlanForm
         'radMonday
         '
         Me.radMonday.AutoSize = True
-        Me.radMonday.Location = New System.Drawing.Point(12, 40)
+        Me.radMonday.Location = New System.Drawing.Point(7, 46)
         Me.radMonday.Name = "radMonday"
         Me.radMonday.Size = New System.Drawing.Size(79, 21)
         Me.radMonday.TabIndex = 0

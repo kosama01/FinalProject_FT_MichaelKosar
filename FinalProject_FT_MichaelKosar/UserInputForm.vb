@@ -14,6 +14,7 @@
     End Sub
 
     Private Sub btnWeightTracker_Click(sender As Object, e As EventArgs) Handles btnWeightTracker.Click
+        WeightTrackerForm.weight = CDec(txtWeight.Text)
         WeightTrackerForm.ShowDialog()
     End Sub
 
