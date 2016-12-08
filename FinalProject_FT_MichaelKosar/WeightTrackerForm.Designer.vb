@@ -41,6 +41,7 @@ Partial Class WeightTrackerForm
         Me.WeightBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.WeightTrackerDataSet = New FinalProject_FT_MichaelKosar.WeightTrackerDataSet()
         Me.WeightTableAdapter = New FinalProject_FT_MichaelKosar.WeightTrackerDataSetTableAdapters.WeightTableAdapter()
+        Me.btnDeleteAll = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvWeightTracker, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.WeightBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,7 +135,7 @@ Partial Class WeightTrackerForm
         Me.dgvWeightTracker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvWeightTracker.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DateDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn, Me.WeightGoalDataGridViewTextBoxColumn, Me.DifferenceDataGridViewTextBoxColumn})
         Me.dgvWeightTracker.DataSource = Me.WeightBindingSource
-        Me.dgvWeightTracker.Location = New System.Drawing.Point(25, 166)
+        Me.dgvWeightTracker.Location = New System.Drawing.Point(25, 217)
         Me.dgvWeightTracker.Name = "dgvWeightTracker"
         Me.dgvWeightTracker.RowTemplate.Height = 24
         Me.dgvWeightTracker.Size = New System.Drawing.Size(449, 215)
@@ -178,11 +179,21 @@ Partial Class WeightTrackerForm
         '
         Me.WeightTableAdapter.ClearBeforeFill = True
         '
+        'btnDeleteAll
+        '
+        Me.btnDeleteAll.Location = New System.Drawing.Point(316, 169)
+        Me.btnDeleteAll.Name = "btnDeleteAll"
+        Me.btnDeleteAll.Size = New System.Drawing.Size(103, 23)
+        Me.btnDeleteAll.TabIndex = 11
+        Me.btnDeleteAll.Text = "Delete All"
+        Me.btnDeleteAll.UseVisualStyleBackColor = True
+        '
         'WeightTrackerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(499, 393)
+        Me.ClientSize = New System.Drawing.Size(499, 444)
+        Me.Controls.Add(Me.btnDeleteAll)
         Me.Controls.Add(Me.dgvWeightTracker)
         Me.Controls.Add(Me.txtWeightGoal)
         Me.Controls.Add(Me.Label1)
@@ -222,4 +233,5 @@ Partial Class WeightTrackerForm
     Friend WithEvents WeightDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents WeightGoalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DifferenceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents btnDeleteAll As Button
 End Class

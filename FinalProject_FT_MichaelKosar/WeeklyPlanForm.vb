@@ -118,54 +118,76 @@ Public Class WeeklyPlanForm
 
     Private Sub WeeklyPlanForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim lineCount As Integer
-        lineCount = File.ReadAllLines(fileMonday).Length
-        activityReadFile = File.OpenText(fileMonday)
-        For counter As Integer = 0 To (lineCount - 1)
-            activityMon.Add(activityReadFile.ReadLine())
-        Next
-        activityReadFile.Close()
+        Try
+            lineCount = File.ReadAllLines(fileMonday).Length
+            activityReadFile = File.OpenText(fileMonday)
+            For counter As Integer = 0 To (lineCount - 1)
+                activityMon.Add(activityReadFile.ReadLine())
+            Next
+            activityReadFile.Close()
+        Catch ex As Exception
 
-        lineCount = File.ReadAllLines(fileTuesday).Length
-        activityReadFile = File.OpenText(fileTuesday)
-        For counter As Integer = 0 To (lineCount - 1)
-            activityTue.Add(activityReadFile.ReadLine())
-        Next
-        activityReadFile.Close()
+        End Try
+        Try
+            lineCount = File.ReadAllLines(fileTuesday).Length
+            activityReadFile = File.OpenText(fileTuesday)
+            For counter As Integer = 0 To (lineCount - 1)
+                activityTue.Add(activityReadFile.ReadLine())
+            Next
+            activityReadFile.Close()
+        Catch ex As Exception
 
-        lineCount = File.ReadAllLines(fileWednesday).Length
-        activityReadFile = File.OpenText(fileWednesday)
-        For counter As Integer = 0 To (lineCount - 1)
-            activityWed.Add(activityReadFile.ReadLine())
-        Next
-        activityReadFile.Close()
+        End Try
+        Try
+            lineCount = File.ReadAllLines(fileWednesday).Length
+            activityReadFile = File.OpenText(fileWednesday)
+            For counter As Integer = 0 To (lineCount - 1)
+                activityWed.Add(activityReadFile.ReadLine())
+            Next
+            activityReadFile.Close()
+        Catch ex As Exception
 
-        lineCount = File.ReadAllLines(fileThursday).Length
-        activityReadFile = File.OpenText(fileThursday)
-        For counter As Integer = 0 To (lineCount - 1)
-            activityThu.Add(activityReadFile.ReadLine())
-        Next
-        activityReadFile.Close()
+        End Try
+        Try
+            lineCount = File.ReadAllLines(fileThursday).Length
+            activityReadFile = File.OpenText(fileThursday)
+            For counter As Integer = 0 To (lineCount - 1)
+                activityThu.Add(activityReadFile.ReadLine())
+            Next
+            activityReadFile.Close()
+        Catch ex As Exception
 
-        lineCount = File.ReadAllLines(fileFriday).Length
-        activityReadFile = File.OpenText(fileFriday)
-        For counter As Integer = 0 To (lineCount - 1)
-            activityFri.Add(activityReadFile.ReadLine())
-        Next
-        activityReadFile.Close()
+        End Try
+        Try
+            lineCount = File.ReadAllLines(fileFriday).Length
+            activityReadFile = File.OpenText(fileFriday)
+            For counter As Integer = 0 To (lineCount - 1)
+                activityFri.Add(activityReadFile.ReadLine())
+            Next
+            activityReadFile.Close()
+        Catch ex As Exception
 
-        lineCount = File.ReadAllLines(fileSaturday).Length
-        activityReadFile = File.OpenText(fileSaturday)
-        For counter As Integer = 0 To (lineCount - 1)
-            activitySat.Add(activityReadFile.ReadLine())
-        Next
-        activityReadFile.Close()
+        End Try
+        Try
+            lineCount = File.ReadAllLines(fileSaturday).Length
+            activityReadFile = File.OpenText(fileSaturday)
+            For counter As Integer = 0 To (lineCount - 1)
+                activitySat.Add(activityReadFile.ReadLine())
+            Next
+            activityReadFile.Close()
+        Catch ex As Exception
 
-        lineCount = File.ReadAllLines(fileSunday).Length
-        activityReadFile = File.OpenText(fileSunday)
-        For counter As Integer = 0 To (lineCount - 1)
-            activitySun.Add(activityReadFile.ReadLine())
-        Next
-        activityReadFile.Close()
+        End Try
+        Try
+            lineCount = File.ReadAllLines(fileSunday).Length
+            activityReadFile = File.OpenText(fileSunday)
+            For counter As Integer = 0 To (lineCount - 1)
+                activitySun.Add(activityReadFile.ReadLine())
+            Next
+            activityReadFile.Close()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub Form_FromClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing

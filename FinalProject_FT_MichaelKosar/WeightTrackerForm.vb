@@ -1,15 +1,40 @@
-﻿Public Class WeightTrackerForm
+﻿Imports System.IO
+
+Public Class WeightTrackerForm
     Public weight As Decimal
+    Private records As New Dictionary(Of Date, DailyWeight)
+    Private filename As String = "Weightrecords.txt"
+    Dim ReadFile As StreamReader
+    Dim WriteFile As StreamWriter
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
     End Sub
 
     Private Sub WeightTrackerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'WeightTrackerDataSet.Weight' table. You can move, or remove it, as needed.
-        Me.WeightTableAdapter.Fill(Me.WeightTrackerDataSet.Weight)
         txtWeight.Text = weight
         txtWeightGoal.Text = weight
         dtpDate.Value = DateAndTime.Today
+        Dim lineCount As Integer
+        Try
+            lineCount = File.ReadAllLines(filename).Length
+            ReadFile = File.OpenText(filename)
+            For counter As Integer = 0 To (lineCount - 1)
+                Dim line = ReadFile.ReadLine()
+                Dim record() As String = line.Split(","c)
+                records.Add(CDate(record(0)), New DailyWeight(CDate(record(0)), CDec(record(1)), CDec(record(2)), CDec(record(3))))
+                WeightTableAdapter.Insert(CDate(record(0)), CDec(record(1)), CDec(record(2)), CDec(record(3)))
+            Next
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        Try
+            ReadFile.Close()
+        Catch ex As Exception
+
+        End Try
+        Me.WeightTableAdapter.Fill(Me.WeightTrackerDataSet.Weight)
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -21,17 +46,37 @@
             If a Is Nothing Then
                 WeightTableAdapter.Insert(dtpDate.Value, CDec(txtWeight.Text), CDec(txtWeightGoal.Text), (CDec(txtWeightGoal.Text) - CDec(txtWeight.Text)))
                 Me.WeightTableAdapter.Fill(Me.WeightTrackerDataSet.Weight)
+                records.Add(dtpDate.Value, New DailyWeight(dtpDate.Value, CDec(txtWeight.Text), CDec(txtWeightGoal.Text), (CDec(txtWeightGoal.Text) - CDec(txtWeight.Text))))
             Else
                 Dim response As MsgBoxResult
                 response = MsgBox("Do you want to modify the existing weight for that date?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm")
                 If response = MsgBoxResult.Yes Then
                     a.Weight = CDec(txtWeight.Text)
+                    a.Weight_Goal = CDec(txtWeightGoal.Text)
+                    a.Difference = CDec(txtWeightGoal.Text) - CDec(txtWeight.Text)
                     WeightTableAdapter.Update(a)
+                    records.Item(dtpDate.Value) = New DailyWeight(dtpDate.Value, CDec(txtWeight.Text), CDec(txtWeightGoal.Text), (CDec(txtWeightGoal.Text) - CDec(txtWeight.Text)))
                     Me.WeightTableAdapter.Fill(Me.WeightTrackerDataSet.Weight)
                 End If
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error")
         End Try
+    End Sub
+
+    Private Sub Form_FromClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        System.IO.File.WriteAllText(filename, "")
+        WriteFile = File.AppendText(filename)
+        For Each r In records
+            WriteFile.WriteLine(r.Value.ToString)
+        Next
+        WriteFile.Close()
+        WeightTrackerDataSet.Clear()
+        Me.Dispose()
+    End Sub
+
+    Private Sub btnDeleteAll_Click(sender As Object, e As EventArgs) Handles btnDeleteAll.Click
+        records.Clear()
+        WeightTrackerDataSet.Weight.Rows.Clear()
     End Sub
 End Class
