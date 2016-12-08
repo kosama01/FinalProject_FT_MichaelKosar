@@ -14,7 +14,11 @@
     End Sub
 
     Private Sub btnWeightTracker_Click(sender As Object, e As EventArgs) Handles btnWeightTracker.Click
-        WeightTrackerForm.weight = CDec(txtWeight.Text)
+        Try
+            WeightTrackerForm.weight = CDec(txtWeight.Text)
+        Catch ex As Exception
+            MessageBox.Show("Incorrect format for weight")
+        End Try
         WeightTrackerForm.ShowDialog()
         WeightTrackerForm.firstTimeOpening = False
     End Sub
