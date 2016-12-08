@@ -4,8 +4,9 @@ Public Class WeightTrackerForm
     Public weight As Decimal
     Private records As New Dictionary(Of Date, DailyWeight)
     Private filename As String = "Weightrecords.txt"
-    Dim ReadFile As StreamReader
-    Dim WriteFile As StreamWriter
+    Private ReadFile As StreamReader
+    Private WriteFile As StreamWriter
+    Public firstTimeOpening As Boolean
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
     End Sub
@@ -22,7 +23,9 @@ Public Class WeightTrackerForm
                 Dim line = ReadFile.ReadLine()
                 Dim record() As String = line.Split(","c)
                 records.Add(CDate(record(0)), New DailyWeight(CDate(record(0)), CDec(record(1)), CDec(record(2)), CDec(record(3))))
-                WeightTableAdapter.Insert(CDate(record(0)), CDec(record(1)), CDec(record(2)), CDec(record(3)))
+                If firstTimeOpening Then
+                    WeightTableAdapter.Insert(CDate(record(0)), CDec(record(1)), CDec(record(2)), CDec(record(3)))
+                End If
             Next
 
         Catch ex As Exception
@@ -34,7 +37,7 @@ Public Class WeightTrackerForm
         Catch ex As Exception
 
         End Try
-        Me.WeightTableAdapter.Fill(Me.WeightTrackerDataSet.Weight)
+        WeightTableAdapter.Fill(WeightTrackerDataSet.Weight)
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -45,7 +48,7 @@ Public Class WeightTrackerForm
             Dim a As WeightTrackerDataSet.WeightRow = table.FindBy_Date(dtpDate.Value)
             If a Is Nothing Then
                 WeightTableAdapter.Insert(dtpDate.Value, CDec(txtWeight.Text), CDec(txtWeightGoal.Text), (CDec(txtWeightGoal.Text) - CDec(txtWeight.Text)))
-                Me.WeightTableAdapter.Fill(Me.WeightTrackerDataSet.Weight)
+                WeightTableAdapter.Fill(WeightTrackerDataSet.Weight)
                 records.Add(dtpDate.Value, New DailyWeight(dtpDate.Value, CDec(txtWeight.Text), CDec(txtWeightGoal.Text), (CDec(txtWeightGoal.Text) - CDec(txtWeight.Text))))
             Else
                 Dim response As MsgBoxResult
@@ -56,7 +59,7 @@ Public Class WeightTrackerForm
                     a.Difference = CDec(txtWeightGoal.Text) - CDec(txtWeight.Text)
                     WeightTableAdapter.Update(a)
                     records.Item(dtpDate.Value) = New DailyWeight(dtpDate.Value, CDec(txtWeight.Text), CDec(txtWeightGoal.Text), (CDec(txtWeightGoal.Text) - CDec(txtWeight.Text)))
-                    Me.WeightTableAdapter.Fill(Me.WeightTrackerDataSet.Weight)
+                    WeightTableAdapter.Fill(WeightTrackerDataSet.Weight)
                 End If
             End If
         Catch ex As Exception
@@ -78,5 +81,6 @@ Public Class WeightTrackerForm
     Private Sub btnDeleteAll_Click(sender As Object, e As EventArgs) Handles btnDeleteAll.Click
         records.Clear()
         WeightTrackerDataSet.Weight.Rows.Clear()
+        WeightTableAdapter.DeleteAll()
     End Sub
 End Class

@@ -135,6 +135,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WeightTrackerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="WeightTrackerDataSet.vb">
+      <DependentUpon>WeightTrackerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="WeightTrackerForm.Designer.vb">
       <DependentUpon>WeightTrackerForm.vb</DependentUpon>
     </Compile>

@@ -51,7 +51,7 @@ Partial Class WeightTrackerForm
         'dtpDate
         '
         Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpDate.Location = New System.Drawing.Point(115, 115)
+        Me.dtpDate.Location = New System.Drawing.Point(544, 78)
         Me.dtpDate.Name = "dtpDate"
         Me.dtpDate.Size = New System.Drawing.Size(122, 22)
         Me.dtpDate.TabIndex = 1
@@ -59,7 +59,7 @@ Partial Class WeightTrackerForm
         'lblDate
         '
         Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(22, 120)
+        Me.lblDate.Location = New System.Drawing.Point(482, 81)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(38, 17)
         Me.lblDate.TabIndex = 2
@@ -76,7 +76,7 @@ Partial Class WeightTrackerForm
         '
         'txtWeight
         '
-        Me.txtWeight.Location = New System.Drawing.Point(115, 76)
+        Me.txtWeight.Location = New System.Drawing.Point(93, 78)
         Me.txtWeight.Name = "txtWeight"
         Me.txtWeight.Size = New System.Drawing.Size(100, 22)
         Me.txtWeight.TabIndex = 4
@@ -87,7 +87,7 @@ Partial Class WeightTrackerForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(499, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(678, 28)
         Me.MenuStrip1.TabIndex = 5
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -106,7 +106,7 @@ Partial Class WeightTrackerForm
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(316, 117)
+        Me.btnAdd.Location = New System.Drawing.Point(448, 131)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(103, 23)
         Me.btnAdd.TabIndex = 6
@@ -116,7 +116,7 @@ Partial Class WeightTrackerForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(262, 76)
+        Me.Label1.Location = New System.Drawing.Point(226, 81)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(86, 17)
         Me.Label1.TabIndex = 7
@@ -124,7 +124,7 @@ Partial Class WeightTrackerForm
         '
         'txtWeightGoal
         '
-        Me.txtWeightGoal.Location = New System.Drawing.Point(375, 71)
+        Me.txtWeightGoal.Location = New System.Drawing.Point(340, 76)
         Me.txtWeightGoal.Name = "txtWeightGoal"
         Me.txtWeightGoal.Size = New System.Drawing.Size(100, 22)
         Me.txtWeightGoal.TabIndex = 8
@@ -135,10 +135,10 @@ Partial Class WeightTrackerForm
         Me.dgvWeightTracker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvWeightTracker.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DateDataGridViewTextBoxColumn, Me.WeightDataGridViewTextBoxColumn, Me.WeightGoalDataGridViewTextBoxColumn, Me.DifferenceDataGridViewTextBoxColumn})
         Me.dgvWeightTracker.DataSource = Me.WeightBindingSource
-        Me.dgvWeightTracker.Location = New System.Drawing.Point(25, 217)
+        Me.dgvWeightTracker.Location = New System.Drawing.Point(12, 175)
         Me.dgvWeightTracker.Name = "dgvWeightTracker"
         Me.dgvWeightTracker.RowTemplate.Height = 24
-        Me.dgvWeightTracker.Size = New System.Drawing.Size(449, 215)
+        Me.dgvWeightTracker.Size = New System.Drawing.Size(654, 215)
         Me.dgvWeightTracker.TabIndex = 9
         '
         'DateDataGridViewTextBoxColumn
@@ -181,7 +181,7 @@ Partial Class WeightTrackerForm
         '
         'btnDeleteAll
         '
-        Me.btnDeleteAll.Location = New System.Drawing.Point(316, 169)
+        Me.btnDeleteAll.Location = New System.Drawing.Point(163, 131)
         Me.btnDeleteAll.Name = "btnDeleteAll"
         Me.btnDeleteAll.Size = New System.Drawing.Size(103, 23)
         Me.btnDeleteAll.TabIndex = 11
@@ -192,7 +192,7 @@ Partial Class WeightTrackerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(499, 444)
+        Me.ClientSize = New System.Drawing.Size(678, 402)
         Me.Controls.Add(Me.btnDeleteAll)
         Me.Controls.Add(Me.dgvWeightTracker)
         Me.Controls.Add(Me.txtWeightGoal)

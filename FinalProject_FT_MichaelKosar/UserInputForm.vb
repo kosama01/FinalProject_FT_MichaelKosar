@@ -16,6 +16,7 @@
     Private Sub btnWeightTracker_Click(sender As Object, e As EventArgs) Handles btnWeightTracker.Click
         WeightTrackerForm.weight = CDec(txtWeight.Text)
         WeightTrackerForm.ShowDialog()
+        WeightTrackerForm.firstTimeOpening = False
     End Sub
 
     Private Sub btnCalories_Click(sender As Object, e As EventArgs) Handles btnCalories.Click
@@ -31,5 +32,9 @@
 
     Private Sub btnWeekPlan_Click(sender As Object, e As EventArgs) Handles btnWeekPlan.Click
         WeeklyPlanForm.ShowDialog()
+    End Sub
+
+    Private Sub UserInputForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        WeightTrackerForm.firstTimeOpening = True
     End Sub
 End Class
