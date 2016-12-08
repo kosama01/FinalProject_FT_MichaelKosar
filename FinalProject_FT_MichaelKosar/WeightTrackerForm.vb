@@ -18,6 +18,11 @@ Public Class WeightTrackerForm
         Dim lineCount As Integer
         Try
             lineCount = File.ReadAllLines(filename).Length
+        Catch ex As Exception
+            Return
+        End Try
+        Try
+            lineCount = File.ReadAllLines(filename).Length
             ReadFile = File.OpenText(filename)
             For counter As Integer = 0 To (lineCount - 1)
                 Dim line = ReadFile.ReadLine()
