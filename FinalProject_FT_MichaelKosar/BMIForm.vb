@@ -19,17 +19,17 @@
         If cboNormalBMI.Checked Then
             If BMI > 24.9 Then
                 idealWeight = 24.9 * metricHeight * metricHeight / 0.45
-                lblIdealWeight.Text = idealWeight.ToString("d") & " lbs"
+                lblIdealWeight.Text = idealWeight.ToString("n") & " lbs"
                 lblIdealBMI.Text = "24.9%"
                 lblStatus.Text = "You are overweight"
             ElseIf BMI < 18.5 Then
                 idealWeight = 24.9 * metricHeight * metricHeight / 0.45
-                lblIdealWeight.Text = idealWeight.ToString("d") & " lbs"
+                lblIdealWeight.Text = idealWeight.ToString("n") & " lbs"
                 lblIdealBMI.Text = "18.5%"
                 lblStatus.Text = "You are underweight"
             Else
                 idealWeight = userWeight
-                lblIdealWeight.Text = idealWeight.ToString("d") & " lbs"
+                lblIdealWeight.Text = idealWeight.ToString("n") & " lbs"
                 lblIdealBMI.Text = (BMI / 100).ToString("p")
                 lblStatus.Text = "Your weight is normal"
             End If

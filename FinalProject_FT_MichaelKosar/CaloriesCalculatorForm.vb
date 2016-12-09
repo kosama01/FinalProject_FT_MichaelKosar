@@ -25,6 +25,10 @@
     End Sub
     'Add food to list
     Private Sub btnAddFood_Click(sender As Object, e As EventArgs) Handles btnAddFood.Click
+        If txtName.Text = "" Then
+            MessageBox.Show("There is no name for the food")
+            Return
+        End If
         Try
             Dim food As Food = New Food(txtName.Text, CDec(txtCalories.Text))
             foods.Add(food)
@@ -35,6 +39,10 @@
     End Sub
     'Add excercise to list
     Private Sub btnAddExcercise_Click(sender As Object, e As EventArgs) Handles btnAddExcercise.Click
+        If txtName.Text = "" Then
+            MessageBox.Show("There is no name for the excercise")
+            Return
+        End If
         Try
             Dim excercise As Excercise = New Excercise(txtName.Text, CDec(txtCalories.Text))
             excercises.Add(excercise)
@@ -45,11 +53,19 @@
     End Sub
     'Removes food from list
     Private Sub btnRemoveFood_Click(sender As Object, e As EventArgs) Handles btnRemoveFood.Click
+        If libFood.SelectedIndex = -1 Then
+            MessageBox.Show("No food was selected")
+            Return
+        End If
         foods.Remove(libFood.SelectedItem)
         FillListBoxes()
     End Sub
     'Removes excercise from list
     Private Sub btnRemoveExcercise_Click(sender As Object, e As EventArgs) Handles btnRemoveExcercise.Click
+        If libExcercises.SelectedIndex = -1 Then
+            MessageBox.Show("No excercise was selected")
+            Return
+        End If
         excercises.Remove(libExcercises.SelectedItem)
         FillListBoxes()
     End Sub
